@@ -1,0 +1,1286 @@
+*
+    /*   */
+
+{
+    padding: 0px;/*Removes default margins from HTML and sets corners*/
+    margin: 0px; /*Removes default margins from HTML and sets corners*/
+    border: 0px;
+    font-family: "Times New Roman", "Arial";/*change font to a web safe font */
+
+}
+
+
+
+body {/*   */
+    color: white;
+}
+
+a {/*Hyperlinks manipulation   */
+    color: white; /* Color change  */
+    text-decoration: none; /* Removes hyperlink underlining, bullets ext.  */
+}
+
+
+
+/*----------------------------------------------------- Navigation Bar ----------------------------------------------   */
+
+
+.Bar > p{
+    animation: blink 0.9s linear infinite;
+    text-shadow: 5px 5px 5px blue,
+    -2px -2px 2px green,
+    2px -2px 2px green,
+    -2px 2px 2px blue,
+    2px 2px 2px blue;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+
+}
+
+@keyframes blink {
+    30% {
+        opacity: 0.7;
+    }
+}
+.NavigationBar {/* sets properties inside the Navigation Bar   */
+    background: url("../images/trees-1915245_1280.jpg") ;
+    background-color: whitesmoke;/* Color for the whole Navigation Bar  */
+    position: fixed;/* position will be fixed for the bar on top all the time  */
+    width: 100%;/* stretches the navigation bar to the whole page width  */
+    z-index: 30; /* if there is other content underneath menu it will slide over  */
+    min-height: 70px;/* Sets the minimum size of the bar   */
+    filter: drop-shadow(0px 15px 15px black); /*adds a white hue drop shadow effect below nav bar*/
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.NavigationBar ul {/* Targets the ul list inside the Navigation Bar  */
+    margin: 0; /* sets the margin and padding to 0 for a tight menu  */
+    padding: 0; /* sets the margin and padding to 0 for a tight menu  */
+    list-style:none; /* Clears the bullets from the hyperlinks  */
+    overflow: hidden; /* Hides anything going out of bounds  */
+    background-image:url("../images/MidRes/cocktail-1535518_1280 (1).jpg") ; /* Background  */
+    background-size: cover ; /* stretches the image to cover the container*/
+    border-radius: 20px; /* Curves drop down menu */
+    border-bottom: 20px black solid;
+}
+
+.NavigationBar li a {/* Targets th individual hyperlinks inside the list  */
+    display: block; /* will change the hyperlinks to blocks  */
+    padding: 20px 20px; /*change back to 10 overall */
+    text-decoration: none; /* remove underlining   */
+    color: white; /* Set color of hyperlinks inside menu for individual pages   */
+    font-style: oblique; /* Changes the font style of the menu individual pages   */
+    font-size: 2em; /* changes the font-size relative to the element   */
+    font-weight: bolder ; /* Below changes impact the fond in the main Bar */
+    text-shadow: 5px 5px 5px green,
+    -2px -2px 2px blue,
+    2px -2px 2px blue,
+    -2px 2px 2px green,
+    2px 2px 2px green;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+
+}
+
+.NavigationBar li a:hover , .NavigationBar .Button:hover{/* Targets th individual hyperlinks inside the list while hovering  */
+    background-color: black;/* color when hovering over   */
+    border-radius: 20px;  /*ads smooth edges to highlight*/
+    text-decoration: none; /* Removes decoration  */
+    opacity: 0.5;
+}
+
+.NavigationBar .Name {
+    float: left; /* Floats name to the left  */
+    display: block;/* will display the hyperlinks in block format as a whole element  */
+    font-size: 2em; /* Changes font size relative to other elements to X times size  */
+    padding: 20px 0px 0px 0px; /* adds padding on top of name only  */
+    text-decoration: none; /* remove underlining   */
+    font-style: italic;/* Changes font to italic  */
+    font-weight: bold; /* emphasises text  */
+}
+
+.NavigationBar .menu{
+    clear:both;/* Menu will be cleared below left floated element name, and my name will appear above  */
+    max-height:0px; /* will collapse and expand the menu, starting by default as 0 the menu is collapses   */
+    transition: max-height 0.8s ease; /* will animate above property transition */
+
+}
+
+.NavigationBar .Bar{/* will target element to form the menu icon on right hand side   */
+    background-image: url("../images/LowRes/marble-surface-2341290.jpg");
+    background-position: center center;
+    user-select: none;
+    color: whitesmoke;
+    font-weight: bold;
+    text-shadow: red;
+    font-size: 3em;
+    float: right; /* moves menu to the right  */
+    position: relative; /* parent for span (child) which will have absolute positioning  */
+    padding: 5px; /* padding for hamburger */
+    cursor: pointer; /* will change cursor to pointer when hovering over menu  */
+    background-color:WindowFrame; /* adds a separate color to hamburger  */
+    border-radius: 20px 0px 0px 20px; /* smooth edges on left side */
+    border: 3px solid white; /* adds a small border for styling purposes around hamburger */
+    width: 50vw;
+
+}
+
+.NavigationBar .Button {
+    display: none; /* removes the checkbox needed for hamburger   */
+}
+.NavigationBar .Button:checked ~ .menu { /* when the menu button is checked the ~ symbol will target all UL in the menu */
+    max-height: 100vh; /* menu will expand with above transition max height to fit all 7 pages or more if needed  */
+}
+
+.NavigationBar .CurrentPage a { /* targets current page links on the bar to give a sense of which page teh user is on*/
+    font-weight: bold;
+    border-radius: 10px;
+    opacity: 0.50;
+}
+
+
+/*----------------------------------------------------- Navigation Bar ----------------------------------------------   */
+
+
+
+
+/*----------------------------------------------------- Footer ----------------------------------------------   */
+
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    background: url("../images/LowRes/macro_shot_photograp_3XI0x.jpg");
+    background-size: cover;
+    color: skyblue;
+    text-shadow:
+            -2px -1px 0 black,
+            2px -1px 0 black,
+            -2px 1px 0 black,
+            2px 1px 0 black;
+    font-size: 1.8em;
+}
+
+.FooterContainer{
+    display: flex;
+}
+
+.FooterContainer .Box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.Box p{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.Box .Information {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.left .Information .social {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.FooterButton {
+    min-height: 40px;
+    min-width: 80px;
+    margin: 5px;
+    border-radius: 10px;
+    background: lightblue;
+    border: 1px black solid;
+}
+
+
+
+/*----------------------------------------------------- Footer ----------------------------------------------   */
+
+
+
+
+
+/*----------------------------------------------------- css Grid   ----------------------------------------------   */
+
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 15vh 50vh 30vh 80vh 40vh 40vh 40vh 50vh 50vh 50vh 50vh 50vh 15vh;
+    justify-items: stretch;
+    align-items: stretch;
+
+
+
+}
+
+/* test*/
+
+.Grid > div {
+    min-height: 100px;
+    min-width: 100px;
+    /*border: 5px green solid;*/
+}
+
+.GridBrick1 {
+    grid-column: 1/5;
+    border-bottom: 2px solid lightblue;
+
+}
+.GridBrick2 {
+    grid-column: 1/3;
+    grid-row: 2/2;
+    background-image: url("../images/LowRes/glass_1868045_1920.jpg");
+    filter: drop-shadow(30px 30px 30px black);
+    opacity: 0.7;
+    background-size: cover;
+}
+.GridBrick3 {
+    grid-column: 1/3;
+    grid-row: 2/2;
+    background-position: center;
+    height: 80%;
+    width: 80%;
+    background-size: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+    z-index: +1;
+    border: 2px solid lightblue;
+}
+.GridBrick4 {
+    grid-column: 3/5;
+    grid-row: 2/2;
+    background-image: url("../images/LowRes/brick-wall-1916752_640.jpg");
+    filter: drop-shadow(30px 30px 30px black);
+    background-size: cover;
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-shadow: 5px 5px 5px blue,
+    -2px -2px 2px green,
+    2px -2px 2px green,
+    -2px 2px 2px lightblue,
+    2px 2px 2px lightblue;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+}
+
+.Span1{
+    font-size: 2em;
+    align-self: center;
+    font-family: SansSerif;
+}
+
+.GridBrick5 {
+    grid-column: 1/5;
+    border-top: 2px solid lightblue;
+}
+
+.GridBrick6 {
+    grid-column: 1/5;
+    grid-row: 4/4;
+    opacity: 0.7;
+    background-size: cover;
+    filter: drop-shadow(30px 30px 30px black);
+}
+
+.GridBrick6Sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/5;
+    grid-row: 4/4;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.GridBrick7 {
+    grid-column: 1/5;
+}
+.GridBrick8 {
+    grid-column: 1/5;
+    grid-row: 6/6;
+    background-image: url("../images/MidRes/clear-glass-window-with-moist-effect-989941.jpg");
+    opacity: 0.7;
+    background-size: cover;
+    filter: drop-shadow(30px 30px 30px black);
+    border: 2px lightblue solid;
+}
+
+.GridBrick9 {
+    grid-column: 1/5;
+    grid-row: 6/6;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 5px 5px 5px green,
+    -2px -2px 2px red,
+    2px -2px 2px red,
+    -2px 2px 2px black,
+    2px 2px 2px green;
+    z-index: 5;
+    color: white;
+    overflow: hidden;
+}
+.Span1{
+    font-size: 2em;
+    align-self: center;
+    font-family: SansSerif;
+}
+.GridBrick10 {
+    grid-column: 1/5;
+    filter: drop-shadow(30px 30px 30px black);
+}
+.GridBrick11 {
+    grid-column: 1/5;
+}
+.GridBrick12 {
+    grid-column: 1/5;
+    filter: drop-shadow(30px 30px 30px black);
+}
+.GridBrick13 {
+    grid-column: 1/5;
+}
+.GridBrick14 {
+    grid-column: 1/5;
+    filter: drop-shadow(30px 30px 30px black);
+}
+.GridBrick15 {
+    grid-column: 1/5;
+}
+.GridBrick16 {
+    text-align: center;
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/5;
+    filter: drop-shadow(10px 10px 10px black);
+    z-index: 5;
+}
+
+.GridBrick16Sub1 {
+    text-decoration: none;
+    font-size: 2em;
+    background-image: linear-gradient(to bottom right, white, lightblue);
+    display: block;
+    transition: all 1s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.GridBrick16Sub1 span {
+    color: black;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: 1s;
+}
+.GridBrick16Sub1 span:after {
+    content: '>>';
+    position: absolute;
+    opacity:0;
+    top: 0;
+    right: -100px;
+    transition: 1s;
+}
+.GridBrick16Sub1:hover {
+    background-image: linear-gradient(to bottom right, lightblue, white);
+    filter: drop-shadow(30px 30px 30px black);
+}
+
+.GridBrick16Sub1:hover span {
+    padding-right: 50px;
+}
+
+.GridBrick16Sub1:hover span:after {
+    opacity: 1;
+    right: 20px;
+}
+
+.Container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.ContainerLeft {
+
+    width: 30%;
+    height: 80%;
+    border-radius: 20px 0px 0px 20px ;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(30px 30px 30px black);
+    overflow: hidden;
+
+}
+
+.ContainerLeft:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    border-radius: 20px 20px 20px 20px ;
+    z-index: 10;
+    filter: drop-shadow(50px 50px 50px black);
+    border: 2px lightblue solid;
+}
+
+
+.ContainerRight {
+    width: 45%;
+    height: 80%;
+    border-radius: 0px 20px 20px 0px ;
+    background-position: center;
+    background-size: cover;
+    text-align: left;
+    color: black;
+    font-size: 1.5em;
+    font-style: italic;
+    background-image: url("../images/LowRes/marble-surface-2341290.jpg");
+    filter: drop-shadow(30px 30px 30px black);
+    overflow: hidden;
+}
+.ContainerRight p{
+    padding: 20px;
+    color: gold;
+    text-shadow: 1px 1px 1px black,
+    -1px -1px 1px black,
+    1px -1px 1px black,
+    -1px 1px 1px black,
+    1px 1px 1px black;
+    font-weight: 900;
+}
+.ContainerRight:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    border-radius: 20px 20px 20px 20px ;
+    z-index: 10;
+    filter: drop-shadow(50px 50px 50px black);
+    border: 2px lightblue solid;
+}
+
+/*----------------------------------------------------- css Grid   ----------------------------------------------   */
+
+
+/*----------------------------------------------------- Gallery   ----------------------------------------------   */
+
+#GalleryOuterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    overflow: visible;
+    perspective: 700px;
+    transform-style: preserve-3d;
+
+
+}
+
+#GalleryInnerContainer, #CardStack {
+    position: relative;
+    display: flex;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+
+}
+
+
+#GalleryInnerContainer img {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 200px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px lightblue solid;
+    filter: drop-shadow(20px 20px 20px black);
+}
+
+#GalleryInnerContainer p {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateX(90deg);
+}
+
+#Base {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateX(90deg);
+}
+
+
+@keyframes spin {
+    from{
+        transform: rotateY(0deg);
+    } to{
+          transform: rotateY(360deg);
+      }
+}
+
+@keyframes spinRevert {
+    from{
+        transform: rotateY(360deg);
+    } to{
+          transform: rotateY(0deg);
+      }
+}
+
+
+/*----------------------------------------------------- Gallery   ----------------------------------------------   */
+
+/*----------------------------------------------------- Gate   ----------------------------------------------   */
+
+#Gate {
+    position: fixed;
+    background-size: cover;
+    opacity: 0.8;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    filter: saturate(200%);
+    background-image: url("../images/MidRes/clear-glass-window-with-moist-effect-989941.jpg");
+    z-index: 1000;
+}
+
+
+
+
+
+/*----------------------------------------------------- Gate  ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 1 Style   ----------------------------------------------   */
+
+.P1Wrapper{
+    background: url('../images/HiRes/Pic1.jpg');/* will allow for a responsive background to change
+    along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.P1Section2 > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 40vh;
+    font-size: 2em;
+    border: 2px lightblue ;
+    border-style:solid dotted;
+    color: black;
+
+
+}
+
+.P1Div1 {
+
+
+}
+.P1Div2, .P1Div4, .P1Div6, .P1Div8, .P1Div10, .P1Div12, .P1Div14, .P1Div16{
+    background-color: white;
+    background-size: cover;
+    filter: drop-shadow(30px 30px 30px black);
+    overflow:hidden;
+    background-image: url("../images/LowRes/bar-1869656_640.jpg");
+    background-position: center center;
+
+}
+
+.P1Div2Sub1, .P1Div4Sub1, .P1Div6Sub1, .P1Div8Sub1, .P1Div10Sub1, .P1Div12Sub1, .P1Div14Sub1, .P1Div16Sub1 {
+    align-items: start;
+    margin: 30px;
+    min-width: 456px;
+    min-height: 351px;
+    background-size: cover;
+    background-position: center center;
+    filter: drop-shadow(30px 30px 30px orchid);
+}
+
+
+
+.P1Div2Sub1 {
+    background-image: url("../images/LowRes/beer_advertising_271_RWfEr.jpg");
+}
+
+.P1Div4Sub1 {
+    background-image: url("../images/LowRes/assorted-liquor-bottles-3566226 (2).jpg");
+    border: lightblue 1px solid ;
+}
+
+.P1Div6Sub1 {
+    background-image: url("../images/LowRes/Webp.net-compress-image (14).jpg");
+}
+
+.P1Div10Sub1 {
+    background-image: url("../images/LowRes/Webp.net-compress-image (16).jpg");
+}
+
+.P1Div12Sub1 {
+    background-image: url("../images/LowRes/alphabet-bar-blue-bright-316149.jpg");
+}
+
+.P1Div14Sub1 {
+    background-image: url("../images/LowRes/bar-1869656_640.jpg");
+}
+
+.P1Div16Sub1 {
+    background-image: url("../images/LowRes/assorted-wine-bottles-1283219.jpg");
+}
+
+
+
+
+.P1Div2Sub2, .P1Div4Sub2, .P1Div6Sub2, .P1Div8Sub2, .P1Div10Sub2, .P1Div12Sub2, .P1Div14Sub2, .P1Div16Sub2 {
+    color: white;
+    font-size: 1em;
+    margin: 30px;
+    min-width: 380px;
+    min-height: 299px;
+    background-size: cover;
+    background-color: white;
+    filter: drop-shadow(30px 30px 30px black);
+    background-image: url("../images/LowRes/Webp.net-compress-image (13).jpg");
+    border-radius: 20px;
+    padding: 20px;
+    text-shadow: 5px 5px 5px blue,
+    -2px -2px 2px green,
+    2px -2px 2px green,
+    -2px 2px 2px blue,
+    2px 2px 2px blue;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+}
+
+#Indexnavigation {
+    max-height: 15vh;
+    font-size: 2em;
+}
+
+
+
+
+/*----------------------------------------------------- Page 1 Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 2 Dublin Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P2Wrapper{
+    background: url('../images/HiRes/temple-bar-2344400_1920.jpg');/* will allow for a responsive background to change
+    along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      Top City Icon - iconic picture to represent city (no more than 300kb)    */
+
+#Dublin3 {
+    background-image: url("../images/MidRes/bridge-230311_1920.jpg");
+}
+
+/*    Gallery Banner  - memorial background for the gallery      */
+
+#Dublin6 {
+    background-image: url("../images/MidRes/red-wine-1004255_1920.jpg");
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Dublin11ContainerLeft{
+    background-image: url("../images/LowRes/Dublin/brazenhead.jpg");
+}
+/* https://www.flickr.com/photos/jessiemoore/2423875052/ */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Dublin12ContainerLeft{
+    background-image: url("../images/LowRes/Dublin/templebar.jpg");
+}
+/* https://pixabay.com/it/photos/temple-bar-pub-bar-birra-cafe-2344400/ */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Dublin13ContainerLeft{
+    background-image: url("../images/LowRes/Dublin/thequays.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/8373257938 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Dublin14ContainerLeft{
+    background-image: url("../images/LowRes/Dublin/theoliver.jpg");
+}
+/* https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Gogarty.JPG/320px-Gogarty.JPG */
+
+#Dublin15ContainerLeft{
+    background-image: url("../images/LowRes/Dublin/fitzsimons.jpg");
+}
+/*   https://www.flickr.com/photos/infomatique/30297819262    */
+
+
+
+
+/*----------------------------------------------------- Page 2 Dublin Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 3 Cork Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P3Wrapper{
+    background: url('../images/HiRes/cork-4686695_1920.jpg');/* https://pixabay.com/bg/photos/%D0%BA%D0%BE%D1%80%D0%BA-cork-%D0%B8%D1%80%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F-cork-ireland-4686695/*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      https://pixabay.com/bg/photos/%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%BA%D1%8A%D1%89%D0%B0-%D1%81%D1%82%D0%B0%D1%80-%D1%86%D1%8A%D1%80%D0%BA%D0%B2%D0%B0-3020932/    */
+
+#Cork3 {
+    background-image: url("../images/MidRes/architecture-3020932_1280.jpg");
+}
+
+/*    https://www.pexels.com/photo/clear-glass-of-wine-935240/     */
+
+#Cork6 {
+    background-image: url("../images/MidRes/clear-glass-of-wine-935240 (1).jpg");
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Cork11ContainerLeft{
+    background-image: url("../images/LowRes/Cork/cantys.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/7586595454 */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Cork12ContainerLeft{
+    background-image: url("../images/LowRes/Cork/theraven.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/5745017051 */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Cork13ContainerLeft{
+    background-image: url("../images/LowRes/Cork/thepoorrelation.jpg");
+}
+/* https://www.geograph.ie/reuse.php?id=4180339 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Cork14ContainerLeft{
+    background-image: url("../images/LowRes/Cork/jimcashman.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/5741153379 */
+
+/*    Top 5 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Cork15ContainerLeft{
+    background-image: url("../images/LowRes/Cork/larrytompkins.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/7586238894 */
+
+
+
+
+/*----------------------------------------------------- Page 3 Cork Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 4 Limerick Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P4Wrapper{
+    background: url('../images/HiRes/Webp.net-compress-image (17).jpg');/* https://unsplash.com/s/photos/limerick*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      Top City Icon - iconic picture to represent city (no more than 300kb)    */
+
+#Limerick3 {
+    background-image: url("../images/MidRes/road-4945159_1920.jpg");
+}
+
+/*    Gallery Banner  - memorial background for the gallery      */
+
+#Limerick6 {
+    background-image: url("../images/MidRes/lime-907124_1920.jpg");
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Limerick11ContainerLeft{
+    background-image: url("../images/LowRes/Limerick/fitzgerald.jpg");
+}
+/* flickr.com/photos/infomatique/29994957556 */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Limerick12ContainerLeft{
+    background-image: url("../images/LowRes/Limerick/blackswan.jpg");
+}
+/* https://commons.wikimedia.org/wiki/File:Black_Swan_pub_sign.jpg */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Limerick13ContainerLeft{
+    background-image: url("../images/LowRes/Limerick/costellos.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/14456599304 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Limerick14ContainerLeft{
+    background-image: url("../images/LowRes/Limerick/katie.jpg");
+}
+/* https://www.geograph.ie/more.php?id=6058846 */
+
+/*    Top 5 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Limerick15ContainerLeft{
+    background-image: url("../images/LowRes/Limerick/thelocke.jpg");
+}
+/* https://www.flickr.com/photos/lynnmarie/7954776360 */
+
+
+
+
+/*----------------------------------------------------- Page 4 Limerick Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 5 Galway Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P5Wrapper{
+    background: url('../images/HiRes/ireland-2214410_1920.jpg');/* https://pixabay.com/bg/photos/%D0%B8%D1%80%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F-%D0%B3%D0%BE%D0%BB%D1%83%D0%B5%D0%B9-%D0%BA%D0%BB%D0%B5%D1%8A%D1%80-%D1%81%D0%BA%D0%B0%D0%BB%D0%B0-moher-2214410/*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      https://pixabay.com/bg/photos/%D1%86%D1%8A%D1%80%D0%BA%D0%B2%D0%B0-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D0%BD%D0%B8-%D0%BF%D0%B5%D0%B9%D0%B7%D0%B0%D0%B6-%D0%BD%D0%B5%D0%B1%D0%B5-4708942/    */
+
+#Galway3 {
+    background-image: url("../images/MidRes/church-4708942_640.jpg");
+}
+
+/*    https://pixabay.com/bg/photos/%D0%B2%D0%B8%D0%BD%D0%BE-%D0%BF%D0%BB%D1%8F%D1%81%D1%8A%D0%BA-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE-%D1%87%D0%B5%D1%80%D0%B2%D0%B5%D0%BD%D0%BE-%D0%B0%D0%BB%D0%BA%D0%BE%D1%85%D0%BE%D0%BB-1543170/      */
+
+#Galway6 {
+    background-image: url("../images/MidRes/wine-1543170_1280.jpg");
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Galway11ContainerLeft{
+    background-image: url("../images/LowRes/Galway/johnkeogh.jpg");
+}
+/* https://www.flickr.com/photos/89641522@N08/26778477342 */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Galway12ContainerLeft{
+    background-image: url("../images/LowRes/Galway/porterhouse.jpg");
+}
+/* https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Galway_-_Eyre_Square_-_The_Galway_Hostel_-_panoramio.jpg/320px-Galway_-_Eyre_Square_-_The_Galway_Hostel_-_panoramio.jpg */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Galway13ContainerLeft{
+    background-image: url("../images/LowRes/Galway/taaffes.jpg");
+}
+/* https://www.geograph.ie/more.php?id=3024928 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Galway14ContainerLeft{
+    background-image: url("../images/LowRes/Galway/thequays.jpg");
+}
+/* https://www.geograph.ie/more.php?id=3026707 */
+
+
+/*    Top 5 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Galway15ContainerLeft{
+    background-image: url("../images/LowRes/Galway/sonnymoloys.jpg");
+}
+/* https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Galway-Pub-12-Sonny_Molloy%27s-gje.jpg/320px-Galway-Pub-12-Sonny_Molloy%27s-gje.jpg */
+
+
+
+
+
+/*----------------------------------------------------- Page 5 Galway Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 6 Waterford Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P6Wrapper{
+    background: url('../images/HiRes/1280px-Caoilfhionn_Hanton_Waterford_Walls_2018.jpg');/* https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Caoilfhionn_Hanton_Waterford_Walls_2018.jpg/1280px-Caoilfhionn_Hanton_Waterford_Walls_2018.jpg*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      Top City Icon - iconic picture to represent city (no more than 300kb)    */
+
+#Waterford3 {
+    background-image: url("../images/MidRes/ireland-4773567_640.jpg");
+}
+
+/*    https://pixabay.com/bg/photos/%D1%87%D0%B0%D1%88%D0%B0-%D1%80%D0%B0%D0%BA%D0%B8%D1%8F-alcohol-2363152/      */
+
+#Waterford6 {
+    background-image: url("../images/MidRes/cup-2363152_1280.jpg");
+    background-position: center center;
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Waterford11ContainerLeft{
+    background-image: url("../images/LowRes/Waterford/covebar.jpg");
+}
+/* https://www.geograph.ie/more.php?id=5449556 */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Waterford12ContainerLeft{
+    background-image: url("../images/LowRes/Waterford/thethree.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/27961174245 */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Waterford13ContainerLeft{
+    background-image: url("../images/LowRes/Waterford/thelady.jpg");
+}
+/* https://www.geograph.ie/more.php?id=5854125 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Waterford14ContainerLeft{
+    background-image: url("../images/LowRes/Waterford/thdoolans.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/30475208641 */
+
+/*    Top 5 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Waterford15ContainerLeft{
+    background-image: url("../images/LowRes/Waterford/themunster.jpg");
+}
+/* https://www.flickr.com/photos/firehuse999/34901003125/ */
+
+
+
+
+/*----------------------------------------------------- Page 6 Waterford Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 7 Drogheda Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P7Wrapper{
+    background: url('../images/HiRes/cable-bridge-outside-drogheda-173733.jpg');/* https://www.pexels.com/photo/cable-bridge-outside-drogheda-173733/*/
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*      https://unsplash.com/photos/pDBPo8wSzUw   */
+
+#Drogheda3 {
+    background-image: url("../images/MidRes/dimitry-anikin-pDBPo8wSzUw-unsplash.jpg");
+}
+
+/*    Gallery Banner  - memorial background for the gallery      */
+
+#Drogheda6 {
+    background-image: url("../images/MidRes/drink-3313606_1280.jpg");
+}
+
+/*    Top 1 Picture - Pub or Restaurant Picture  picture  (no more than 150) */
+
+#Drogheda11ContainerLeft{
+    background-image: url("../images/LowRes/Drogheda/thepunt.jpg");
+}
+/* https://www.geograph.ie/photo/4569573 */
+
+/*    Top 2 Picture- Pub or Restaurant Picture  (no more than 150)     */
+
+#Drogheda12ContainerLeft{
+    background-image: url("../images/LowRes/Drogheda/mchuhgs.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/5638282769/in/album-72157606982900903/ */
+
+/*    Top 3 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Drogheda13ContainerLeft{
+    background-image: url("../images/LowRes/Drogheda/clarkes.jpg");
+}
+/* https://www.geograph.ie/more.php?id=4571131 */
+
+/*    Top 4 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Drogheda14ContainerLeft{
+    background-image: url("../images/LowRes/Drogheda/gleesons.jpg");
+}
+/* https://www.flickr.com/photos/infomatique/5634460648 */
+
+/*    Top 5 Picture- Pub or Restaurant Picture   (no more than 150)     */
+
+#Drogheda15ContainerLeft{
+    background-image: url("../images/LowRes/Drogheda/millmount.jpg");
+}
+/*  https://www.flickr.com/photos/infomatique/5638921152 */
+
+
+
+
+/*----------------------------------------------------- Page 7 Drogheda Style   ----------------------------------------------   */
+
+
+
+/*----------------------------------------------------- Page 8 About Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P8Wrapper{
+    background-size: cover ;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.Grid1{
+    display: grid;
+    grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh 60vh 60vh  15vh ;
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+.Grid1Sub1 {
+    background-image: url("../images/HiRes/background-image-2066854_1920.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    grid-row: 1/1;
+    width:100%;
+    height: 100%;
+    box-shadow: 30px 30px 60px 10px black;
+    z-index: 1;
+
+}
+
+
+.Grid1Sub1 p {
+
+    font-size: 1.8em;
+    color: black;;
+    text-shadow: 1px 1px 1px gold,
+    -1px -1px 1px gold,
+    1px -1px 1px gold,
+    -1px 1px 1px black,
+    1px 1px 1px gold;
+    font-weight: 400;
+    padding: 100px 40px 50px 40px;
+
+
+}
+.Grid1Sub2 {
+    background-image: url("/Users/Sahee/Downloads/Website-Project-5-master/Website-Project-5-master/images/HiRes/Saheed.jpg");
+    background-size: cover;
+    background-position: top ;
+    background-attachment: fixed;
+    overflow: hidden;
+    grid-row: 2/2;
+    width:100%;
+    height: 100%;
+    filter: blur(5px);
+
+}
+
+.Grid1Sub3 {
+    background-image: url("../images/HiRes/background-image-2066854_1920.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    grid-row: 3/3;
+    width:100%;
+    height: 100%;
+    filter: drop-shadow(30px 30px 30px black);
+
+}
+
+.Grid1Sub3 p {
+
+    font-size: 1.3em;
+    color: black;
+    padding: 20px 70px 20px 70px;
+
+}
+
+.Grid1Sub3 ul {
+
+    font-size: 1.3em;
+    color: black;
+    padding: 5px 70px 5px 70px;
+
+}
+
+.Grid1Sub4 {
+    background-image: url("../images/HiRes/blur-close-up-code-computer-546819.jpg");
+    background-size: cover;
+    background-position: top ;
+    background-attachment: fixed;
+    overflow: hidden;
+    grid-row: 4/4;
+    width:100%;
+    height: 100%;
+
+}
+
+.Grid1Sub5 {
+    background-image: url("../images/HiRes/background-image-2066854_1920.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    grid-row: 5/5;
+    width:100%;
+    height: 100%;
+    box-shadow: 30px 30px 60px 10px black;
+    z-index: 1;
+
+}
+
+
+.Grid1Sub5 p {
+
+    font-size: 1.8em;
+    color: black;
+    text-shadow: 1px 1px 1px gold,
+    -1px -1px 1px gold,
+    1px -1px 1px gold,
+    -1px 1px 1px black,
+    1px 1px 1px gold;
+    font-weight: 400;
+    padding: 100px 40px 50px 40px;
+
+
+}
+.Grid1Sub6 {
+    background-image: url("../images/HiRes/lu.png");
+    background-size: cover;
+    background-position: top ;
+    background-attachment: fixed;
+    overflow: hidden;
+    grid-row: 6/6;
+    width:100%;
+    height: 100%;
+
+}
+
+.Grid1Sub7 {
+    background-image: url("../images/HiRes/background-image-2066854_1920.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    grid-row: 7/7;
+    width:100%;
+    height: 100%;
+    filter: drop-shadow(30px 30px 30px black);
+
+}
+
+.Grid1Sub7 p {
+
+    font-size: 1.3em;
+    color: black;
+    padding: 20px 70px 20px 70px;
+
+}
+
+.Grid1Sub7 ul {
+
+    font-size: 1.3em;
+    color: black;
+    padding: 5px 70px 5px 70px;
+
+}
+
+.Grid1Sub8 {
+    background-image: url("../images/HiRes/coding-computer-data-depth-of-field-577585.jpg");
+    background-size: cover;
+    background-position: top ;
+    background-attachment: fixed;
+    overflow: hidden;
+    grid-row: 8/8;
+    width:100%;
+    height: 100%;
+
+}
+
+.About16 {
+    text-align: center;
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    filter: drop-shadow(10px 10px 10px black);
+    z-index: 5;
+}
+
+
+
+
+
+
+/*----------------------------------------------------- Page 8 About Style   ----------------------------------------------   */
+
+/*----------------------------------------------------- Page 9 Minor Style   ----------------------------------------------   */
+
+/*   Page background    */
+
+.P9Wrapper{
+    background: url('../images/HiRes/sorry-we-re-closed-but-still-awesome-tag-1101720.jpg');/* will allow for a responsive background to change
+    along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
+    width: 12800px;
+    height: 8530px;
+    background-position: center center;
+    background-size: cover ;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+
+
+/*----------------------------------------------------- Page 9 Minor Style   ----------------------------------------------   */

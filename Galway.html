@@ -1,0 +1,180 @@
+<!DOCTYPE html> <!--   -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galway</title> <!-- Page title  -->
+    <link href="css/style.css" rel="stylesheet" > <!-- css reference  -->
+    <meta name="viewport" content="width=device-width, initial - scale=1.0"> <!-- Meta tag to scale for mobile devices setting the scale to 1 to avoid elements appearing to small   -->
+</head>
+<body>
+<div class="P5Wrapper">
+    <section class="NavigationBar"> <!-- Made sections solely for syntax separation purposes the first contains the header with the navigation bar   -->
+        <header class="Header"> <!-- Header  -->
+            <div class="NavigationBar"> <!-- Navigation bar  -->
+                <input class="Button" type="Checkbox" id="Navigation"/> <!-- Tag to turn on and off the in-build hamburger menu checkbox will turn to 3 bars mnu  -->
+                <label class="Bar" for="Navigation"><p>BAR MENU</p><span class="Icon"></span></label> <!--  Label for the hamburger menu   -->
+                <ul class="menu"> <!-- unordered list which will become the menu  -->
+                    <li ><a href="index.html">Back to Home Page</a></li> <!-- Links to my individual pages  -->
+                    <li><a href="Dublin.html">Guide to Dublin</a></li><!-- Links to my individual pages  -->
+                    <li><a href="Cork.html">Guide to Cork</a></li><!-- Links to my individual pages  -->
+                    <li><a href="Limerick.html">Guide to Limerick</a></li><!-- Links to my individual pages  -->
+                    <li class="CurrentPage"><a href="Galway.html">Guide to Galway</a></li><!-- Links to my individual pages  -->
+                    <li><a href="Waterford.html">Guide to Waterford</a></li><!-- Links to my individual pages  -->
+                    <li><a href="Drogheda.html">Guide to Drogheda</a></li><!-- Links to my individual pages  -->
+                    <li><a href="About.html">About</a></li><!-- Links to my individual pages  -->
+                </ul>
+            </div>
+        </header>
+    </section>
+    <div class="Grid" id="Top"> <!-- Wrapping Grid for positioning and an Anchor for my to top button  -->
+        <div class = "GridBrick1" id="Galway1"></div>
+        <div class = "GridBrick2" id="Galway2"></div>
+        <div class = "GridBrick3" id="Galway3"></div>
+        <div class = "GridBrick4" id="Galway4"><p><span class="Span1">Galway</span><br><br><br>
+            Is the sixth most populous city in Ireland, with a population of 79,934.
+            The city was created in the 1100's by King of Connacht and  is often referred to as the “Cultural Heart of Ireland” as it is most associated with the Irish language, music, song and dance traditions.
+            The coast has one of the most beautiful roads to travel, with amazing views.
+            </p></div>
+        <div class = "GridBrick5" id="Galway5"><p></p></div>
+        <div class = "GridBrick6" id="Galway6"></div>
+        <div class = "GridBrick6Sub">
+            <div id = "GalleryOuterContainer">
+                <div id="GalleryInnerContainer">
+                    <div id="CardStack">
+
+                        <!-- images to for the spinning gallery no more than 150kb each -->
+
+                        <img id = "GalwayImage1" src="images/LowRes/Galway/1.jpg" alt=""> <!-- https://www.flickr.com/photos/opankov/11235475324/in/photolist-i7QKnN-EbqiE5-42jjn-2g8dsup-7QowRk-dVf5PJ-rSfV2G-4mbFMt-56hdt4-baLTWc-4jaZJo-2zMfJr-fAJ7ML-88fB68-oS44fJ-exHVmY-2W6NGb-2wZpz-og77RS-VfNXtw-5DnJm7-SRDTHL-c5jNqU-pLyKD8-9CFG4c-8bi6Xa-adkv4L-HaHRd9-2gWqzft-XArfGW-9tidr5-HaHYnQ-dyfT68-HF7ZCm-e821MT-7Snpa3-J6DU4K-dUV4Ui-uGT6d-6gowF-fS4vWM-9o7cSM-jF71T8-2f4STq-8kF8ia-a5FGmc-9pKPxq-dueUHs-T79jr1-5ZJHyF -->
+                        <img id = "GalwayImage2" src="images/LowRes/Galway/2.jpg" alt=""> <!-- https://www.flickr.com/photos/181875831@N08/47995689991/in/photolist-2g8dsup-7QowRk-dVf5PJ-rSfV2G-4mbFMt-56hdt4-baLTWc-4jaZJo-2zMfJr-fAJ7ML-88fB68-oS44fJ-exHVmY-2W6NGb-2wZpz-og77RS-VfNXtw-5DnJm7-SRDTHL-c5jNqU-pLyKD8-9CFG4c-8bi6Xa-adkv4L-HaHRd9-2gWqzft-XArfGW-9tidr5-HaHYnQ-dyfT68-HF7ZCm-e821MT-7Snpa3-J6DU4K-dUV4Ui-uGT6d-6gowF-fS4vWM-9o7cSM-jF71T8-2f4STq-8kF8ia-a5FGmc-9pKPxq-dueUHs-T79jr1-5ZJHyF-dgMiNo-S8gez3-2qnsSt -->
+                        <img id = "GalwayImage3" src="images/LowRes/Galway/3.jpg" alt=""> <!-- https://www.flickr.com/photos/129391295@N05/15600521877/in/photolist-pLyKD8-9CFG4c-8bi6Xa-adkv4L-HaHRd9-2gWqzft-XArfGW-9tidr5-HaHYnQ-dyfT68-HF7ZCm-e821MT-7Snpa3-J6DU4K-dUV4Ui-uGT6d-6gowF-fS4vWM-9o7cSM-jF71T8-2f4STq-8kF8ia-a5FGmc-9pKPxq-dueUHs-T79jr1-5ZJHyF-dgMiNo-S8gez3-2qnsSt-7Ky9JG-3dWyM8-Ny1EWS-5nxX7b-WEiWZP-3JVPbc-8TPde2-8SjsJQ-EQbzgL-yZY6qn-9S9hNX-geb9ad-4mTLkA-Qbaah9-9bXQut-qu44jZ-9HJANG-9S9jQV-jkwB1-dcYATD -->
+                        <img id = "GalwayImage4" src="images/LowRes/Galway/4.jpg" alt=""> <!-- https://www.flickr.com/photos/dryang/1798506003/in/photolist-3JVPbc-8TPde2-8SjsJQ-EQbzgL-yZY6qn-9S9hNX-geb9ad-4mTLkA-Qbaah9-9bXQut-qu44jZ-9HJANG-9S9jQV-jkwB1-dcYATD-qudmRB-5obFWp-cgp3q-6Uz6ca-d3opWs-4aZkSS-owyBK-2gUynBZ-sVQ3K-2gUyyo3-8xndev-9iJKxK-8wLWJ5-2gTpYrT-2CZJx-wisrrd-28ygZcy-qr6ojz-2bLDeVZ-6bjG4T-bAcZYT-5wgdpL-2gUUwdg-5gVPk1-2gVkWHj-fho2DS-fh8P4P-fho2Tm-2hJSwq1-fh8Pkn-6UbCd8-TDXZxb-Nt4WHc-b28SLi-tjGQXt -->
+                        <img id = "GalwayImage5" src="images/LowRes/Galway/5.jpg" alt=""> <!-- https://www.flickr.com/photos/amaralcamargo/17428638885/in/photolist-sy7k8T-9t2c58-drGQgA-8JURMT-8hByrc-9Dgnir-2gUVqrL-2gsFwWo-4uD1uj-57CcJn-8qxpvP-a8sFz9-reUyLS-8e4pTu-fz1ib6-oM28bM-8KNrUB-dheNBH-fv8E25-8QSDP8-if54H-LjZXwd-tQvDn-aoSxq3-57CbDc-8t8Dm5-2hwXXD4-evb9Cm-e243c6-NUhhta-57GmzQ-81PFqJ-96j1Be-qUWWba-9cbVLa-7svRg5-6n3yCG-57CbcT-54FjVL-LD7Ls-ecqLz-ad1oGg-495PPY-arV9sU-ctMJ5f-kgiRS-8857un-a7d5G1-5GwE1L-efpcE2 -->
+                        <img id = "GalwayImage6" src="images/LowRes/Galway/6.jpg" alt=""> <!-- https://www.flickr.com/photos/12362424@N07/48512925022/in/photolist-2gUVqrL-2gsFwWo-4uD1uj-57CcJn-8qxpvP-a8sFz9-reUyLS-8e4pTu-fz1ib6-oM28bM-8KNrUB-dheNBH-fv8E25-8QSDP8-if54H-LjZXwd-tQvDn-aoSxq3-57CbDc-8t8Dm5-2hwXXD4-evb9Cm-e243c6-NUhhta-57GmzQ-81PFqJ-96j1Be-qUWWba-9cbVLa-7svRg5-6n3yCG-57CbcT-54FjVL-LD7Ls-ecqLz-ad1oGg-495PPY-arV9sU-ctMJ5f-kgiRS-8857un-a7d5G1-5GwE1L-efpcE2-2DaGmP-4d6Tis-gidgAs-5iqmBc-PryZs-2hTDVAZ -->
+
+                        <!-- images to for the spinning gallery no more than 150kb each -->
+
+                    </div>
+                    <div id="Base"></div>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick7" id="Galway7"></div>
+        <div class = "GridBrick8" id="Galway8"></div>
+        <div class = "GridBrick9" id="Galway9"><p><span class="Span2">Guide to the Pubs in Galway</span><br><br>
+            The pubs in Galway are busy every night and you'll find traditional music sessions happening in various pubs around the place.
+            The city has plenty of tourists, students and locals to make the experience unforgettable, you will not miss fun in Galway.</p></div>
+        <div class = "GridBrick10" id="Galway10"></div>
+        <div class = "GridBrick11" id="Galway11">
+            <div class="Container" id="Galway11Container">
+                <div class="ContainerLeft" id="Galway11ContainerLeft"></div>
+                <div class="ContainerRight" id="Galway11ContainerRight">
+                    <p> <span class="Class3">John Keogh's Gastropub<br></span>
+                        High quality food including Irish steak, fresh West coast seafood and homemade pasta are
+                        only one of the details that made John Keogh’s a renowned and multiple award - winning gastropub in Galway.
+                        A place where you can celebrate from birthday parties to wedding after parties.  </p>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick12" id="Galway12">
+            <div class="Container" id="Galway12Container">
+                <div class="ContainerLeft" id="Galway12ContainerLeft"></div>
+                <div class="ContainerRight" id="Galway12ContainerRight">
+                    <p> <span class="Class3">The Porterhouse<br></span>
+                        Live music, freshest local produce used in the food preparation, a good selection of
+                        drinks and beers, private rooms, late bar,
+                        group discount and more for guarantee a memorable celebration. Breakfast, lunch and dinner available. </p>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick13" id="Galway13">
+            <div class="Container" id="Galway13Container">
+                <div class="ContainerLeft" id="Galway13ContainerLeft"></div>
+                <div class="ContainerRight" id="Galway13ContainerRight">
+                    <p> <span class="Class3">Taaffes Bar<br></span>
+                        Located in the heart of Galway City, the Taaffes is one of the best knowns bar, operating for over 150 years.
+                        It is best known for its Traditional Irish music and some of Irelands best traditional musicians including Sharon Shannon has played there.
+                        There is plenty of seating along the walls and its busy seven nights a week.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick14" id="Galway14">
+            <div class="Container" id="Galway14Container">
+                <div class="ContainerLeft" id="Galway14ContainerLeft"></div>
+                <div class="ContainerRight" id="Galway14ContainerRight">
+                    <p> <span class="Class3">The Quays<br></span>
+                        Live Music Venue of the Year 2017 & Best Music Pub 2018 & 2019
+                        Located in the city centre of Galway, The Quays is one of the most famous pubs,
+                        with more than 400 years. It is a must stop if you are in Galway.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick15" id="Galway15">
+            <div class="Container" id="Galway15Container">
+                <div class="ContainerLeft" id="Galway15ContainerLeft"></div>
+                <div class="ContainerRight" id="Galway15ContainerRight">
+                    <p> <span class="Class3">Sonny Molloy's<br></span>
+                        Award Winning Irish Whiskey Bar
+                        The building was part of a Medieval property built in the 1600’s and you can enjoy a
+                        masterclass with interactive tasting session that’s both fun and informative.
+                        For who likes Whiskey, this is definitely the place.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "GridBrick16" id="Galway16">
+            <button class = "GridBrick16Sub1" style="vertical-align: middle"><a href="Limerick.html"><span>Previous Page</span></a></button>
+            <button class = "GridBrick16Sub1" style="vertical-align: middle"><a href="#Top"><span>Top</span></a></button>
+            <button class = "GridBrick16Sub1" style="vertical-align: middle"><a href="Waterford.html"><span>Next Page</span></a></button>
+        </div>
+    </div>
+    <section>
+        <footer>
+            <div class="FooterContainer">
+                <div class="LeftSide Box">
+                  <p>About Us</p>
+                  <div class="Information">
+                      <div class="StudentNames">
+                          <p>Saheed Abdulraazq Ahmed</p>
+                          <p>Kester Ugochukwu Mbadinuju</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="Main Box">
+                  <p>Info</p>
+                  <div class="Information">
+                      <div class="email">
+                          <span class ="text"><a href=mailto:"saheedabdulrazaq.ahmed@student.griffith.ie" target="_blank">Email:saheedabdulrazaq.ahmed@student.griffith.ie</a></span>
+                      </div>
+                      <div class="StudentNumber">
+                          <span class ="text">Student Number:3061874 -</span>
+                      </div>
+                      <div class="email">
+                          <span class ="text"><a href=mailto:"mbadinujukester@gmail.com" target="_blank">Email: mbadinujukester@gmail.com</a></span>
+                      </div>
+                      <div class="StudentNumber">
+                          <span class ="text">Student Number:3062323 -</span>
+                      </div>
+                  </div>
+              </div>
+                <div class="right box">
+                    <p>Contact Us</p>
+                    <form action="#">
+                        <div class="FooterEmail">
+                            <div class="text">Email </div>
+                            <input type="email" required>
+                        </div>
+                        <div class="FooterMessage">
+                            <div class="text">Message</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div >
+                            <button class="FooterButton" type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>
+<script src="scripts/app.js"></script>
+</body>
+</html>
